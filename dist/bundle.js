@@ -1,4 +1,4 @@
-// [DozSearchItunesApi]  Build version: 1.0.0  
+// [DozSearchItunesApi]  Build version: 1.0.1  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("doz"));
@@ -226,7 +226,7 @@ var _class = function (_Component) {
                 _this2.props.records = response.results;
                 _this2.props._isLoading = false;
                 if (!_this2.props.records.length) _this2.props._noResults = true;
-                console.log(_this2.props.records);
+                //console.log(this.props.records)
             }).catch(function (e) {
                 _this2.props._isLoading = false;
                 console.error(e);
