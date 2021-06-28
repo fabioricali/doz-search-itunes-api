@@ -11,11 +11,18 @@ export default class extends Component{
         super(o);
 
         this.props = {
+            term: '',
             records: [],
             searchMediaType: 'music', //movie, podcast, music, musicVideo, audiobook, shortFilm, tvShow, software, ebook, all,
             searchLimit: 100,
             _isLoading: false,
             _noResults: false
+        }
+
+        this.propsListener = {
+            searchMediaType: () => {
+                this.search();
+            }
         }
     }
 
@@ -50,7 +57,22 @@ export default class extends Component{
                 }
             </style>
             <div class="search-container">
-                <${DozSearchfield} placeholder="Search on Itunes" class="search-field" d:on-search="${this.search}" d:on-clear="${this.clearSearch}"/>
+                <div style="display: flex; margin-bottom: 24px">
+                    <${DozSearchfield} style="flex: 1; height: 36px" placeholder="Search on Itunes" class="search-field" d:on-search="${this.prepareSearch}" d:on-clear="${this.clearSearch}"/>
+                    <select style="height: 36px" d-bind="searchMediaType">
+                        <option value="music">Music</option>
+                        <option value="movie">Movie</option>
+                        <option value="podcast">Podcast</option>
+                        <option value="musicVideo">Music and Video</option>
+                        <option value="audiobook">Audiobook</option>
+                        <option value="shortFilm">Short Film</option>
+                        <option value="tvShow">TV Show</option>
+                        <option value="software">software</option>
+                        <option value="ebook">Ebook</option>
+                        <option value="all">All</option>
+                    </select>
+                </div>
+
                 <div d-show="${this.props._isLoading}">Loading...</div>
                 <div d-show="${this.props._noResults}">No results...</div>
                 <div class="search-results">
@@ -75,11 +97,17 @@ export default class extends Component{
         `
     }
 
-    search(value) {
+    prepareSearch(value) {
+        this.props.term = value;
+        this.search();
+    }
+
+    search() {
+        if (!this.props.term) return;
         this.props.records = [];
         this.props._isLoading = true;
         this.props._noResults = false;
-        let url = `https://itunes.apple.com/search?limit=${this.props.searchLimit}&media=${this.props.searchMediaType}&term=${value.split(' ').join('+')}`
+        let url = `https://itunes.apple.com/search?limit=${this.props.searchLimit}&media=${this.props.searchMediaType}&term=${this.props.term.split(' ').join('+')}`
         fetchJsonP(url, {
             jsonpCallback: 'callback',
         })
@@ -98,7 +126,8 @@ export default class extends Component{
     }
 
     clearSearch() {
-        this.props.records = []
+        this.props.records = [];
+        this.props.term = '';
     }
 
 };
