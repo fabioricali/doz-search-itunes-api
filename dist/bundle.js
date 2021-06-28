@@ -1,4 +1,4 @@
-// [DozSearchItunesApi]  Build version: 1.0.4  
+// [DozSearchItunesApi]  Build version: 1.0.5  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("doz"));
@@ -235,7 +235,8 @@ var _class = function (_Component) {
             this.props._requestError = false;
             var url = "https://itunes.apple.com/search?limit=" + this.props.searchLimit + "&media=" + this.props.searchMediaType + "&term=" + this.props.term.split(' ').join('+');
             (0, _fetchJsonp2.default)(url, {
-                jsonpCallback: 'callback'
+                jsonpCallback: 'callback',
+                timeout: 1000 * 60
             }).then(function (response) {
                 return response.json();
             }).then(function (response) {
