@@ -1,6 +1,6 @@
 {
     "name": "doz-search-itunes-api",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Search on iTunes via API",
     "main": "dist/bundle.js",
     "scripts": {

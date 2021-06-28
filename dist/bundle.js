@@ -1,4 +1,4 @@
-// [DozSearchItunesApi]  Build version: 1.0.2  
+// [DozSearchItunesApi]  Build version: 1.0.3  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("doz"));
@@ -150,7 +150,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(["\n            <style> \n                * {\n                    box-sizing: border-box;\n                }\n                \n                .search-container {\n                }\n                \n                .search-results {\n                    display: grid;\n                    grid-template-columns: repeat(auto-fill, minmax(198px, max-content));\n                    /*grid-template-columns: repeat(auto-fill, minmax(182px, max-content));*/\n                    gap: 16px;\n                    overflow: auto;\n                    /*height: 92vh;*/\n                }\n                \n                .search-field input{\n                    padding: 8px;\n                    width: 100%;\n                    font-size: 16px;\n                    margin-bottom: 24px;\n                    border-radius: 4px;\n                    border: 1px solid #ccc;\n                }\n            </style>\n            <div class=\"search-container\">\n                <", " placeholder=\"Search on Itunes\" class=\"search-field\" d:on-search=\"", "\" d:on-clear=\"", "\"/>\n                <div d-show=\"", "\">Loading...</div>\n                <div d-show=\"", "\">No results...</div>\n                <div class=\"search-results\">\n                    ", "\n                </div>\n            </div>\n        "], ["\n            <style> \n                * {\n                    box-sizing: border-box;\n                }\n                \n                .search-container {\n                }\n                \n                .search-results {\n                    display: grid;\n                    grid-template-columns: repeat(auto-fill, minmax(198px, max-content));\n                    /*grid-template-columns: repeat(auto-fill, minmax(182px, max-content));*/\n                    gap: 16px;\n                    overflow: auto;\n                    /*height: 92vh;*/\n                }\n                \n                .search-field input{\n                    padding: 8px;\n                    width: 100%;\n                    font-size: 16px;\n                    margin-bottom: 24px;\n                    border-radius: 4px;\n                    border: 1px solid #ccc;\n                }\n            </style>\n            <div class=\"search-container\">\n                <", " placeholder=\"Search on Itunes\" class=\"search-field\" d:on-search=\"", "\" d:on-clear=\"", "\"/>\n                <div d-show=\"", "\">Loading...</div>\n                <div d-show=\"", "\">No results...</div>\n                <div class=\"search-results\">\n                    ", "\n                </div>\n            </div>\n        "]),
+var _templateObject = _taggedTemplateLiteral(["\n            <style> \n                * {\n                    box-sizing: border-box;\n                }\n                \n                .search-container {\n                }\n                \n                .search-results {\n                    display: grid;\n                    grid-template-columns: repeat(auto-fill, minmax(198px, max-content));\n                    /*grid-template-columns: repeat(auto-fill, minmax(182px, max-content));*/\n                    gap: 16px;\n                    overflow: auto;\n                    /*height: 92vh;*/\n                }\n                \n                .search-field input{\n                    padding: 8px;\n                    width: 100%;\n                    font-size: 16px;\n                    margin-bottom: 24px;\n                    border-radius: 4px;\n                    border: 1px solid #ccc;\n                }\n            </style>\n            <div class=\"search-container\">\n                <div style=\"display: flex; margin-bottom: 24px\">\n                    <", " style=\"flex: 1; height: 36px\" placeholder=\"Search on Itunes\" class=\"search-field\" d:on-search=\"", "\" d:on-clear=\"", "\"/>\n                    <select style=\"height: 36px\" d-bind=\"searchMediaType\">\n                        <option value=\"music\">Music</option>\n                        <option value=\"movie\">Movie</option>\n                        <option value=\"podcast\">Podcast</option>\n                        <option value=\"musicVideo\">Music and Video</option>\n                        <option value=\"audiobook\">Audiobook</option>\n                        <option value=\"shortFilm\">Short Film</option>\n                        <option value=\"tvShow\">TV Show</option>\n                        <option value=\"software\">software</option>\n                        <option value=\"ebook\">Ebook</option>\n                        <option value=\"all\">All</option>\n                    </select>\n                </div>\n\n                <div d-show=\"", "\">Loading...</div>\n                <div d-show=\"", "\">No results...</div>\n                <div class=\"search-results\">\n                    ", "\n                </div>\n            </div>\n        "], ["\n            <style> \n                * {\n                    box-sizing: border-box;\n                }\n                \n                .search-container {\n                }\n                \n                .search-results {\n                    display: grid;\n                    grid-template-columns: repeat(auto-fill, minmax(198px, max-content));\n                    /*grid-template-columns: repeat(auto-fill, minmax(182px, max-content));*/\n                    gap: 16px;\n                    overflow: auto;\n                    /*height: 92vh;*/\n                }\n                \n                .search-field input{\n                    padding: 8px;\n                    width: 100%;\n                    font-size: 16px;\n                    margin-bottom: 24px;\n                    border-radius: 4px;\n                    border: 1px solid #ccc;\n                }\n            </style>\n            <div class=\"search-container\">\n                <div style=\"display: flex; margin-bottom: 24px\">\n                    <", " style=\"flex: 1; height: 36px\" placeholder=\"Search on Itunes\" class=\"search-field\" d:on-search=\"", "\" d:on-clear=\"", "\"/>\n                    <select style=\"height: 36px\" d-bind=\"searchMediaType\">\n                        <option value=\"music\">Music</option>\n                        <option value=\"movie\">Movie</option>\n                        <option value=\"podcast\">Podcast</option>\n                        <option value=\"musicVideo\">Music and Video</option>\n                        <option value=\"audiobook\">Audiobook</option>\n                        <option value=\"shortFilm\">Short Film</option>\n                        <option value=\"tvShow\">TV Show</option>\n                        <option value=\"software\">software</option>\n                        <option value=\"ebook\">Ebook</option>\n                        <option value=\"all\">All</option>\n                    </select>\n                </div>\n\n                <div d-show=\"", "\">Loading...</div>\n                <div d-show=\"", "\">No results...</div>\n                <div class=\"search-results\">\n                    ", "\n                </div>\n            </div>\n        "]),
     _templateObject2 = _taggedTemplateLiteral(["\n                                <", " \n                                    artistName=\"", "\"\n                                    trackName=\"", "\"\n                                    album=\"", "\"\n                                    previewUrl=\"", "\"\n                                    genre=\"", "\"\n                                    releaseDate=\"", "\"\n                                    artworkSmall=\"", "\"\n                                    artworkLarge=\"", "\"\n                                    artworkMedium=\"", "\"\n                                />\n                            "], ["\n                                <", " \n                                    artistName=\"", "\"\n                                    trackName=\"", "\"\n                                    album=\"", "\"\n                                    previewUrl=\"", "\"\n                                    genre=\"", "\"\n                                    releaseDate=\"", "\"\n                                    artworkSmall=\"", "\"\n                                    artworkLarge=\"", "\"\n                                    artworkMedium=\"", "\"\n                                />\n                            "]);
 
 var _doz = __webpack_require__(0);
@@ -188,11 +188,18 @@ var _class = function (_Component) {
         var _this = _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).call(this, o));
 
         _this.props = {
+            term: '',
             records: [],
             searchMediaType: 'music', //movie, podcast, music, musicVideo, audiobook, shortFilm, tvShow, software, ebook, all,
             searchLimit: 100,
             _isLoading: false,
             _noResults: false
+        };
+
+        _this.propsListener = {
+            searchMediaType: function searchMediaType() {
+                _this.search();
+            }
         };
         return _this;
     }
@@ -202,7 +209,7 @@ var _class = function (_Component) {
         value: function template(h) {
 
             //language=HTML
-            return h(_templateObject, _dozSearchfield2.default, this.search, this.clearSearch, this.props._isLoading, this.props._noResults, this.props.records.map(function (item) {
+            return h(_templateObject, _dozSearchfield2.default, this.prepareSearch, this.clearSearch, this.props._isLoading, this.props._noResults, this.props.records.map(function (item) {
                 return (
                     //language=html
                     h(_templateObject2, _trackCard2.default, item.artistName, item.trackName, item.collectionName, item.previewUrl, item.primaryGenreName, item.releaseDate, item.artworkUrl100.replace('100x100', '300x300'), item.artworkUrl100.replace('100x100', '1000x1000'), item.artworkUrl100.replace('100x100', '600x600'))
@@ -210,14 +217,21 @@ var _class = function (_Component) {
             }));
         }
     }, {
+        key: "prepareSearch",
+        value: function prepareSearch(value) {
+            this.props.term = value;
+            this.search();
+        }
+    }, {
         key: "search",
-        value: function search(value) {
+        value: function search() {
             var _this2 = this;
 
+            if (!this.props.term) return;
             this.props.records = [];
             this.props._isLoading = true;
             this.props._noResults = false;
-            var url = "https://itunes.apple.com/search?limit=" + this.props.searchLimit + "&media=" + this.props.searchMediaType + "&term=" + value.split(' ').join('+');
+            var url = "https://itunes.apple.com/search?limit=" + this.props.searchLimit + "&media=" + this.props.searchMediaType + "&term=" + this.props.term.split(' ').join('+');
             (0, _fetchJsonp2.default)(url, {
                 jsonpCallback: 'callback'
             }).then(function (response) {
@@ -236,6 +250,7 @@ var _class = function (_Component) {
         key: "clearSearch",
         value: function clearSearch() {
             this.props.records = [];
+            this.props.term = '';
         }
     }]);
 
