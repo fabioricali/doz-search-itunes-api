@@ -113,6 +113,7 @@ export default class extends Component{
         let url = `https://itunes.apple.com/search?limit=${this.props.searchLimit}&media=${this.props.searchMediaType}&term=${this.props.term.split(' ').join('+')}`
         fetchJsonP(url, {
             jsonpCallback: 'callback',
+            timeout: 1000 * 60,
         })
             .then(response => response.json())
             .then(response => {
