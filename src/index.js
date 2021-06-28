@@ -16,6 +16,7 @@ export default class extends Component{
             searchMediaType: 'music', //movie, podcast, music, musicVideo, audiobook, shortFilm, tvShow, software, ebook, all,
             searchLimit: 100,
             _isLoading: false,
+            _requestError: false,
             _noResults: false
         }
 
@@ -75,6 +76,7 @@ export default class extends Component{
 
                 <div d-show="${this.props._isLoading}">Loading...</div>
                 <div d-show="${this.props._noResults}">No results...</div>
+                <div d-show="${this.props._requestError}">Request error, try again...</div>
                 <div class="search-results">
                     ${this.props.records.map(item => 
                             //language=html
@@ -107,6 +109,7 @@ export default class extends Component{
         this.props.records = [];
         this.props._isLoading = true;
         this.props._noResults = false;
+        this.props._requestError = false;
         let url = `https://itunes.apple.com/search?limit=${this.props.searchLimit}&media=${this.props.searchMediaType}&term=${this.props.term.split(' ').join('+')}`
         fetchJsonP(url, {
             jsonpCallback: 'callback',
@@ -121,6 +124,7 @@ export default class extends Component{
             })
             .catch(e => {
                 this.props._isLoading = false;
+                this.props._requestError = true;
                 console.error(e)
             })
     }
