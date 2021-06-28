@@ -1,7 +1,7 @@
 {
-    "name": "YOUR-COMPONENT",
+    "name": "doz-search-itunes-api",
     "version": "0.0.0",
-    "description": "[YOUR-COMPONENT-DESCRIPTION]",
+    "description": "Search on iTunes via API",
     "main": "dist/bundle.js",
     "scripts": {
         "start": "webpack-dev-server --open",
@@ -19,12 +19,12 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/[YOUR-GITHUB-SPACE]/[YOUR-REPOSITORY].git"
+        "url": "git+https://github.com/fabioricali/doz-search-itunes-api.git"
     },
     "bugs": {
-        "url": "https://github.com/[YOUR-GITHUB-SPACE]/[YOUR-REPOSITORY]/issues"
+        "url": "https://github.com/fabioricali/doz-search-itunes-api/issues"
     },
-    "homepage": "https://github.com/[YOUR-GITHUB-SPACE]/[YOUR-REPOSITORY]#readme",
+    "homepage": "https://github.com/fabioricali/doz-search-itunes-api#readme",
     "author": "[YOUR-NAME]",
     "license": "MIT",
     "devDependencies": {
