@@ -89,7 +89,7 @@ export default class extends Component{
                 this.props._isLoading = false;
                 if (!this.props.records.length)
                     this.props._noResults = true;
-                console.log(this.props.records)
+                //console.log(this.props.records)
             })
             .catch(e => {
                 this.props._isLoading = false;
