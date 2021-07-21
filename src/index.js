@@ -59,7 +59,7 @@ export default class extends Component{
             </style>
             <div class="search-container">
                 <div style="display: flex; margin-bottom: 24px">
-                    <${DozSearchfield} style="flex: 1; height: 36px" placeholder="Search on Itunes" class="search-field" d:on-search="${this.prepareSearch}" d:on-clear="${this.clearSearch}"/>
+                    <${DozSearchfield} style="flex: 1; height: 36px; margin-right: 24px" placeholder="Search on Itunes" class="search-field" d:on-search="${this.prepareSearch}" d:on-clear="${this.clearSearch}"/>
                     <select style="height: 36px" d-bind="searchMediaType">
                         <option value="music">Music</option>
                         <option value="movie">Movie</option>
