@@ -19,13 +19,13 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/fabioricali/doz-search-itunes-api.git"
+        "url": "git+https://github.com/xdevelbroadcast/doz-search-itunes-api.git"
     },
     "bugs": {
-        "url": "https://github.com/fabioricali/doz-search-itunes-api/issues"
+        "url": "https://github.com/xdevelbroadcast/doz-search-itunes-api/issues"
     },
-    "homepage": "https://github.com/fabioricali/doz-search-itunes-api#readme",
-    "author": "[YOUR-NAME]",
+    "homepage": "https://github.com/xdevelbroadcast/doz-search-itunes-api#readme",
+    "author": "Xdevel",
     "license": "MIT",
     "devDependencies": {
         "babel-core": "^6.26.0",
