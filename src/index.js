@@ -68,11 +68,15 @@ export default class extends Component {
                     border-radius: 4px;
                     border: 1px solid #ccc;
                 }
+                
+                .search-media-type {
+                    height: 36px;
+                }
             </style>
             <div class="search-container">
                 <div class="search-container-input-wrapper">
                     <${DozSearchfield} placeholder="Search on Itunes" class="search-field" d:on-search="${this.prepareSearch}" d:on-clear="${this.clearSearch}"/>
-                    <select style="height: 36px" d-bind="searchMediaType">
+                    <select class="search-media-type" d-bind="searchMediaType">
                         <option value="music">Music</option>
                         <option value="movie">Movie</option>
                         <option value="podcast">Podcast</option>
