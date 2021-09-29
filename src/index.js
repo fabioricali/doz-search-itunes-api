@@ -5,7 +5,7 @@ import TrackCard from "./track-card";
 
 DozSearchfield.tag = 'search-field';
 
-export default class extends Component{
+export default class extends Component {
 
     constructor(o) {
         super(o);
@@ -37,6 +37,12 @@ export default class extends Component{
                 }
                 
                 .search-container {
+                
+                }
+                
+                .search-container-input-wrapper {
+                    display: flex; 
+                    margin-bottom: 24px;
                 }
                 
                 .search-results {
@@ -46,6 +52,12 @@ export default class extends Component{
                     gap: 16px;
                     overflow: auto;
                     /*height: 92vh;*/
+                }
+                
+                .search-field {
+                    flex: 1; 
+                    height: 36px; 
+                    margin-right: 24px;
                 }
                 
                 .search-field input{
@@ -58,8 +70,8 @@ export default class extends Component{
                 }
             </style>
             <div class="search-container">
-                <div style="display: flex; margin-bottom: 24px">
-                    <${DozSearchfield} style="flex: 1; height: 36px; margin-right: 24px" placeholder="Search on Itunes" class="search-field" d:on-search="${this.prepareSearch}" d:on-clear="${this.clearSearch}"/>
+                <div class="search-container-input-wrapper">
+                    <${DozSearchfield} placeholder="Search on Itunes" class="search-field" d:on-search="${this.prepareSearch}" d:on-clear="${this.clearSearch}"/>
                     <select style="height: 36px" d-bind="searchMediaType">
                         <option value="music">Music</option>
                         <option value="movie">Movie</option>
